@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"> 
+    <title>Meu Programa Web</title>
+    
+</head>
+<body>
+    <header>
+        <h1>Minha Aplicação</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contatos">Contatos</a></li>
+            <li><a href="#cadastro">Cadastro</a></li>
+            <li><a href="#login">Login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </section>
+
+        <section id="contatos">
+            <h2>Contatos</h2>
+            <p>telefone: (32) 00000-000000</p>
+            <p>Email:123abc@inexitente.py</p>
+            <p>Caixa Postal: Rua Abc nr 432534</p>
+        </section>
+
+        <section id="cadastro">
+            <h2>Cadastro</h2>
+            <form action="#" method="POST">
+                <label>
+                    <span>Nome:</span>
+                    <input type="text" name="nome" required>
+                </label>
+                
+                <label>
+                    <span>Faculdade:</span>
+                    <input type="text" name="faculdade" required>
+                </label>
+                
+                <label>
+                    <span>Telefone:</span>
+                    <input type="tel" name="telefone" required>
+                </label>
+                
+                <label>
+                    <span>Ano de Ingresso:</span>
+                    <input type="number" name="ano_ingresso" min="1900" max="2026" required>
+                </label>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section id="login">
+            <h2>Login</h2>
+            <form action="#" method="POST">
+                <label>
+                    <span>Usuário:</span>
+                    <input type="text" name="usuario" required>
+                </label>
+                
+                <label>
+                    <span>Senha:</span>
+                    <input type="password" name="senha" required>
+                </label>
+                
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Todos los derechos reservados &copy 2026</p>
+    </footer>
+
+</body>
+</html>
