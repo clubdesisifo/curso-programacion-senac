@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+             <h1 style="text-align: center;">CADASTRO</h1>
+            <div class="ingresodados">
+                <label for="Nome" class="nome">Nome:</label>
+                <input type="text" name="Nome" id="Nome" placeholder="usuario">  
+            </div>
+            <div class="ingresodados">
+                <label for="email" class="email">email</label>
+                <input type="email" name="email" id="email" placeholder="endereço eletronico" required>  
+            </div>
+            <div class="ingresodados">
+                <label for="telefone">Telefone:</label>
+                <input type="text" name="telefone" id="telefone" placeholder="(00) 00000-0000">  
+            </div> 
+            <div class="ingresodados">
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" required> 
+            </div>
+            <div class="ingresodados">
+                <label for="Descrição">Descrição:</label>
+                <textarea name="" id="Descrição" placeholder="Digite uma descrição sobre você"></textarea>
+            </div>
+            <div class="ingresodados">
+                <span class="titulo-foto">Foto:</span>
+                <label for="foto" class="boton">Seleccionar arquivo</label>
+                <input type="file" name="foto" id="foto" class="input-oculto">
+            </div>
+            <div class="ingresodados">
+                <label for="rango">Nivel:</label>
+                <input type="range" id="rango" min="0" max="10" value="4" oninput="this.nextElementSibling.value = this.value">
+                <output>4</output>
+            </div>
+            <button class="boton">Enviar</button>
+        </form>
+    </div>
+    <h1><a href="index.html">Voltar</a></h1>
+</body>
+</html>

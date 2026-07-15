@@ -1,0 +1,71 @@
+body {
+p::before { content: "Olá "; color: blue; }
+p::after  { content: "!!!";  color: red;  }
+flex-direction: column;
+.link-animado {
+    font-size: 18px;
+    color: #34495e;
+    text-decoration: none;
+    position: relative; /* Base para alinhar a linha virtual */
+    font-weight: bold;
+}
+
+/* Criamos a linha fantasma embaixo do texto */
+.link-animado::after {
+    content: " "; /* Obrigatório para o elemento nascer */
+    position: absolute;
+    bottom: 0px; 
+    left: 0;
+    width: 0%;    /* Começa invisível (largura zero) */
+    height: 20px;  /* Espessura da linha */
+    background-color: #3498db; /* Azul */
+    transition: width 0.3s ease-out; /* Animação suave de expansão */
+}
+
+/* Quando passamos o mouse no link, a linha do ::after cresce para 100% */
+.link-animado:hover::after {
+    width: 100%;
+}
+.btn-download {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 20px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+/* Injeta um ícone de seta apontando para baixo ANTES do texto de cada botão */
+.btn-download::before {
+    content: "📥"; /* O ícone virtual entra aqui */
+    margin-right: 8px; /* Dá um espaço entre o ícone e o texto */
+}
+.btn-download::after {
+    content: "📂"; /* O ícone virtual entra aqui */
+    margin-left: 8px; /* Dá um espaço entre o ícone e o texto */
+}
+.balao-chat {
+    position: relative; /* Base para o triângulo se fixar */
+    background-color: #9b59b6; /* Roxo */
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    max-width: 250px;
+    margin: 20px;
+}
+
+/* Usamos o truque clássico do triângulo de bordas dentro do elemento virtual */
+.balao-chat::after {
+    content: "";
+    position: absolute;
+    bottom: -15px; /* Joga o triângulo para fora, na parte inferior do balão */
+    left: 20px;    /* Afasta um pouco da borda esquerda */
+    
+    /* Desenha o triângulo apontando para baixo */
+    border-width: 15px 15px 0; /* Espessura da borda */
+    border-style: solid;
+    border-color: #9b59b6 transparent; /* Cor igual ao fundo do balão */
+}

@@ -1,0 +1,149 @@
+/* ==========================================================================
+   ESTILOS GERAIS E ESTRUTURA DA PÁGINA
+   ========================================================================== */
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+    min-height: 50vh;
+    margin: 0;
+    padding: 40px;
+    box-sizing: content-box;
+   
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 0px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #7f8c8d;
+    margin-bottom: 40px;
+    max-width: 650px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    /* flex-wrap: wrap;*/
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    width: 260px; /* Aumentado levemente para acomodar melhor os textos explicativos */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #34495e;
+    font-size: 20px;
+}
+
+.description {
+    font-size: 15px;
+    color: #575f5f;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    text-align: left; /* Alinhado à esquerda para facilitar a leitura da explicação */
+    min-height: 140px; /* Garante o alinhamento visual perfeito dos botões */
+}
+
+/* ==========================================================================
+   RESET BASE PARA OS BOTÕES (Limpeza de estilos nativos do navegador)
+   ========================================================================== */
+
+button {
+    border: none;
+    background: transparent;
+    color: white;
+    padding: 14px 28px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    outline: none;
+}
+
+/* ==========================================================================
+   CONFIGURAÇÃO PSICOLÓGICA DAS TRANSIÇÕES
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   BOTÃO 1: COMPRA IMPULSIVA (Alta Reatividade / Baixa Fricção Cognitiva)
+   -------------------------------------------------------------------------- */
+.btn-impulsive {
+    background-color: #16c206; /* Verde Sucesso / Consumo */
+   border-radius: 90px / 25px;
+    background: linear-gradient(to bottom left, rgb(232, 252, 229), rgb(248, 224, 4));
+    transition: all 0.15s ease-out; 
+    box-shadow: 0 4px 4px rgb(12, 255, 4);
+    color: rgb(0, 0, 0);
+}
+
+.btn-impulsive:hover {
+    background-color: #1da02e;
+    transform: translateY(-5px); /* Salto elástico imediato */
+    box-shadow: 0 8px 50px rgb(12, 255, 4);
+}
+
+.btn-impulsive:active {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 8px rgb(35, 241, 17);
+}
+
+/* --------------------------------------------------------------------------
+   BOTÃO 2: FRICÇÃO DISSUASÓRIA (Alta Fricção / Indução de Preguiça)
+   -------------------------------------------------------------------------- */
+.btn-deterrent {
+    background-color: #95a5a6; /* Cinza Neutro / Desinteressante */
+    transition: all 0.9s ease-in; 
+    border-radius: 4px;
+}
+
+.btn-deterrent:hover {
+    background-color: #7f8c8d;
+    filter: brightness(0.30);
+    color: rgb(255, 0, 0);
+    transform: translateY(2px); /* Movimento quase imperceptível */
+    box-shadow: -4px -4px 8px rgb(194, 81, 81);
+    background: linear-gradient(to bottom left, rgb(139, 41, 41), rgb(39, 0, 0));
+}
+.btn-deterrent:active {
+    transform: translatex(4px);
+    box-shadow: 2px 2px 4px rgb(250, 0, 0);
+    background: linear-gradient(to bottom left, rgb(82, 82, 82), rgb(245, 245, 245));
+
+}
+/* --------------------------------------------------------------------------
+   BOTÃO 3: ALERTA RÍGIDO (Sensação de Perigo / Quebra de Fluxo)
+   -------------------------------------------------------------------------- */
+.btn-rigid {
+    background-color: #f82100; /* Vermelho Alerta / Perigo */
+    /* Sem propriedade 'transition' para manter a mudança seca e instantânea */
+}
+
+.btn-rigid:hover {
+    background-color: #883931;
+}
+.btn-rigid:active {
+    box-shadow: 0 4px 8px rgb(224, 9, 9);
+}

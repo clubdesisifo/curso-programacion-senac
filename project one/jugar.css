@@ -1,0 +1,46 @@
+body{
+  height: 100vh;
+  margin: 20px;
+  padding: 0px;
+  font-family: courier, times, sans-serif, monospace;
+  .contenedor {
+    background-color: rgb(49, 223, 43); 
+    width: 25vw;
+    height: 50vh;
+    border: 8px solid rgb(17, 20, 211); 
+    border-radius: 20px;
+
+   display: flex; 
+   }
+   .cajita  {
+    width: 50vw;
+    height: 50vh;
+    background-color: aliceblue;
+    border: 2px solid rgb(247, 74, 6);
+    border-radius: 10px;
+    
+    /* margin: 20px auto; */
+   }
+   #c4 {
+        width: 12.5vw;
+        height: 50px;
+        background-color: rgb(2, 217, 255);
+       }
+   #c1 {
+        width: 12.5vw;
+        height: 50px;
+        background-color: rgb(238, 255, 1);
+       }
+    #c2 {
+        width: 12.5vw;
+        height: 50px;
+        background-color: rgb(255, 2, 2);
+       }
+    #c3 {
+        width: 12.5vw;
+        height: 50px;
+        background-color: rgb(2, 2, 255);
+       }
+    
+}
+    

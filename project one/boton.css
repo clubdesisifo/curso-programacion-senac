@@ -1,0 +1,80 @@
+body {
+  .b0 { 
+        width: 100px;
+        height: 30px;
+        border-radius: 80px 25px;
+        color: rgb(255, 254, 195);
+        background: linear-gradient(to bottom left, rgb(224, 239, 241), rgb(2, 2, 187));
+        box-shadow: 6px 6px 0px #acacac; 
+        transition: all 0.5s ease;
+      }
+      
+  .b0:hover {
+        filter: brightness(0.75);
+      }
+  .b0:active {
+        box-shadow: 0px 0px 0px #411717;
+        transform: translatey(3px); 
+        }
+  .b1 { 
+        width: 100px;
+        height: 100px;
+        border-radius: 50px / 50px;
+        color: rgb(255, 254, 195);
+        background: linear-gradient(to bottom right, rgb(224, 239, 241), rgb(187, 2, 11));
+        box-shadow: 6px 6px 2px #acacac; 
+        transition: all 0.5s ease;
+      }
+      
+  .b1:hover {
+        filter: brightness(0.75);
+      }
+  .b1:active {
+        box-shadow: 3px 3px 3px #411717;
+        transform: translatey(3px); 
+        }
+.b2-container {
+    display: inline-block;
+    margin: 20px;
+    filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.2)); /* Deixei em 2px para ficar menos difuminada */
+    transition: transform 0.15s ease-out, filter 0.15s ease-out;
+}
+.b2-container:hover .b2 {
+    filter: brightness(0.75);
+}
+
+.b2 {
+  position: relative; /* Cria uma base para o triângulo virtual se alinhar */
+    width: 60px;
+    height: 60px;
+    background: none;   /* Remove o fundo do botão para a sombra não bugar */
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+    
+    /* A sombra é aplicada direto no botão e não será cortada */
+    filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.2));
+    transition: transform 0.15s ease-out, filter 0.15s ease-out;
+}
+.b2::before {
+    content: "play"; /* O texto do botão fica aqui dentro agora */
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: #2ecc71; /* Verde */
+    color: black;
+    font-weight: bold;
+    
+    /* Alinhamento do texto no centro do triângulo */
+    display: flex; align-items: center; justify-content: center; padding-right: 10px; box-sizing: border-box;
+    
+    /* O recorte acontece apenas na camada virtual de dentro */
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    transition: filter 0.15s ease-out;
+}     
+.b2:hover::before {
+    filter: brightness(0.75);
+}
+.b2:active {
+    transform: translateY(3px);
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
+}
