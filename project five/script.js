@@ -86,11 +86,49 @@ switch (true) {
   default:
     mencao = "Perdeu!";
 }*/
+/*
+let numSecret = Math.floor(Math.random() * 10) + 1;
+let chute = null;
+let limite = 5;
+let tentativa = 0;
 
-let numSecret = 9
-let chute = null
-while(chute !== numSecret){
-  let chute = Number(prompt("Digite o numero secreto: "))
-  if (chute ===numSecret){alert("Acertou!! 😀😂😊🥰")}
-  else{alert("Perdeu!!")}
+while (chute !== numSecret && tentativa < limite) {
+    tentativa++;
+
+    chute = Number(prompt("Digite o número secreto:"));
+
+    if (chute === numSecret) {
+        alert("Acertou!! 😀😂😊🥰");
+    } else if (chute < numSecret) {
+        alert("Insira um número maior.");
+    } else {
+        alert("Insira um número menor.");
+    }
+}
+
+if (chute !== numSecret) {
+    alert("Game Over! O número secreto era " + numSecret);
+}*/
+
+let idade = 20;
+let situacaoEscolar = true;
+let documentos = true;
+let pagamento = true;
+
+if (idade >= 20) {
+    if (situacaoEscolar) {
+        if (documentos) {
+            if (pagamento) {
+                console.log("Você está matriculado");
+            } else {
+                console.log("Falta pagamento");
+            }
+        } else {
+            console.log("Documentação incompleta");
+        }
+    } else {
+        console.log("Você não atende aos requisitos");
+    }
+} else {
+    console.log("Você não tem idade suficiente");
 }
