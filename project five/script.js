@@ -12,7 +12,7 @@ function promedio() {
     else if (media>10 & media<15){console.log("Boa!!")}
     else if(media===15){console.log("Juan, es voce!!")}
     else if (media>15){console.log("introduccion de dados errada")}
-    else {console.log("vixxi, quase que nao mass sim")    }
+    else {console.log("vixxi, quase que nao mas sim")    }
     console.log(`O Alumno ${name_alumno} tirou media de ${media}`)
 }
  */
@@ -59,23 +59,38 @@ let media = (nota1 + nota2 + nota3)/3
     default: console.log("Nota invalida 😬")
   }
  */
-let nota = 10
-let mencao=""
-switch(true){
-  case nota >=90 && nota <=100:
-    mencao = "A"
-    console.log(mencao)
-    break
-    case nota >= 80:
-      mencao = "B"
-      console.log(mencao)
-      break
-      case nota >=60:
-        mencao = "c"
-        console.log(mencao)
-        break
-        case nota >=40:
-          mencao = "D"
-          break
-          default: mencao = "perdeu!"
+/* let nota = Number(prompt("Digite a nota do aluno:"));
+let mencao = "";
+
+switch (true) {
+  case isNaN(nota) || nota < 0 || nota > 100:
+    mencao = "Nota inválida!";
+    break;
+
+  case nota >= 90:
+    mencao = "A";
+    break;
+
+  case nota >= 80:
+    mencao = "B";
+    break;
+
+  case nota >= 60:
+    mencao = "C";
+    break;
+
+  case nota >= 40:
+    mencao = "D";
+    break;
+
+  default:
+    mencao = "Perdeu!";
+}*/
+
+let numSecret = 9
+let chute = null
+while(chute !== numSecret){
+  let chute = Number(prompt("Digite o numero secreto: "))
+  if (chute ===numSecret){alert("Acertou!! 😀😂😊🥰")}
+  else{alert("Perdeu!!")}
 }
