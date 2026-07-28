@@ -388,7 +388,7 @@ finally{console.log("Operacao de credenciamento finalizada");} */
 //if (idade>=18){console.log("maior Idade")}else{console.log("menor idade")}
 
 // operador ternarios: ALMACENAMENTO DE EXPRESOES SIMPLES
-let idade = 18
+/* let idade = 18
 let situacao = idade >= 18 ?
     "maior idade":
     "menor idade"
@@ -404,6 +404,101 @@ let idade = 20;
 let salario = 3500;
 let resultado = idade < 18 ? "idade insuficiente" : (salario < 3000 ? "renda insuficiente" : "financiamento aprovado");
 
-console.log(resultado);
-   
+console.log(resultado); */
+//------------------------------------------------------- ate aqui o mamao com azucar
+// metodos - strings
+//let nome = "GERALDO"
+//console.log(nome.toLowerCase())]
 
+/* let nome = "GERALDO"
+let nomeMaiuscul0=nome.toLowerCase()
+console.log(nomeMaiusculo) */
+/* 
+let a="python"
+let b="Python"
+if (a===b){console.log("iguais")}else{console.log("diferente")} */
+// METODO INCLUDES() busqueda, filtros, permisos, verificaciones, y validacion
+//let email = "teste@empresa.com"
+//if email.includes("@empresa.com"){console.log("institucional")}else{console.log("pessoal")}
+
+/* let produto = "Notebook AsusNitro V15"
+let filtro="V15"
+if (produto.includes(filtro)){console.log("sim includes")}
+ */
+
+/* let emailUsuario = "1121607@SENACminas.edu.br"
+emailUsuario = emailUsuario.toLowerCase()
+let dominioSenac = "@senacminas.edu.br"
+if (emailUsuario.includes(dominioSenac)){console.log("pode ingresar no site administrativo usando seu cpf e senha")}
+else{console.log("Usuario externo nao pode ingresar no site administrativo")} */
+/* let clientes = [
+    {
+        nome: "Geraldo",
+        email: "gerardim@yahoo.com"
+    },
+    {
+        nome: "Jose",
+        email: "joseito@gmail.com"
+    },
+    {
+        nome: "Juan",
+        email: "Joaocinho@gmail.com"
+    },
+    {
+        nome: "Ze",
+        email: "zezinho@hotmail.com"
+    }
+];
+
+let dominio = "@gmail.com";
+
+// 1. Filtramos el arreglo de objetos
+let clientsGmails = clientes.filter(elemento => elemento.email.includes(dominio));
+
+// 2. Imprimimos el resultado completo del filtro
+console.log(clientsGmails);
+
+// 3. Recorremos para mostrar solo los nombres
+for (let item of clientsGmails) {
+    console.log(item.nome);
+}
+ */
+//metodos STARTwith e ENDwith
+/* let url = https://www.meusite.com.br"
+let validator = "https://"
+if (url.startWith(validator)){
+    console.log("site seguro")
+} */
+/* let cidade ="SJD_registro123"
+let inicio = "SJD_"
+if (cidade.startsWith(inicio)){blablablas}
+ */
+/* let arquivos = ["File.png","lile.pdf", "vide.mp4", "apresentacao.ppt","relatorio.docx", "Financeiro.xlsx", "Datawarehouse.csv"]
+let extensoesPermitidas = [".xlsx",".csv",".xls",".sql"]
+for(let arquivo of arquivos){
+    let arquivoValido = extensoesPermitidas.some (
+        extensao =>arquivo.endsWith(extensao)
+    )
+    if (arquivoValido){console.log("este arquivo est apermitido")}
+    else{console.log("arquivo no permitido")
+}
+}  Escribe un código que compruebe si al menos uno de los archivos de la lista es un archivo ejecutable (que termine en ".exe")
+*/
+let arquivos = ["foto.jpg", "documento.pdf", "script.exe"]
+let hayEjecutables = false
+
+for (let i=0; i<arquivos.length;i++){
+    let arquivoActual=arquivos[i]
+    if (arquivoActual.endsWith(".exe")){
+        hayEjecutables = true
+        break
+    }
+}
+console.log(hayEjecutables)
+
+
+/* let extensoesPermitidas = [".jpg", ".png", ".pdf"]
+for (let arquivo of arquivos) {
+    let arquivoValido = extensoesPermitidas.some(
+        extensao => arquivo.endsWith(extensao))
+} */
