@@ -335,7 +335,7 @@ let ranking = vendedores.sort((a,b)=>b.vendas-a.vendas)
 console.log(ranking)
 ranking.forEach((vendedor,posicao)=>
     console.log(`${posicao+1}}º | O vendedor ${vendedor.nome} vendeu ${vendedor.vendas}`)) */
-let nomes = [
+/* let nomes = [
   "pneu",
   "roda",
   "oleo",
@@ -343,6 +343,133 @@ let nomes = [
   "gasolina",
   "lampada"
 ]
+nomes.sort()
 nomes.forEach((itens,index)=>
 console.log(`${index+1}º ${itens}`)
-)
+) */
+/* let usuarios = [
+  {
+    nome:"davi",
+    idade:98
+  },
+    {
+    nome:"juan",
+    idade:12
+  },
+    {
+    nome:"pira",
+    idade:14
+  },
+    {
+    nome:"paxi",
+    idade:22
+  },
+    {
+    nome:"pastel",
+    idade:44
+  },
+]
+let nomesFormateados = usuarios.map(item => item.nome.toUpperCase())
+console.log(nomesFormateados) */
+/* let vendedores = [
+  {
+    nome :"marlinco",
+    vendas :3456
+},
+{
+    nome :"jose",
+    vendas :356
+},
+{
+    nome :"juan",
+    vendas :3565
+},
+{
+    nome :"andres",
+    vendas :3526
+},
+{
+    nome :"cecilia",
+    vendas :3156
+},
+]
+let vendedoresPremium = vendedores.filter(item => item.vendas>3200)
+console.log(vendedoresPremium)
+
+let vendedoresDemitiveis = vendedores.filter(item => item.vendas<3200)
+console.log(vendedoresDemitiveis) */
+
+/* let productos = [
+  { id: "1", producto: "arroz", precio: 45 },
+  { id: "2", producto: "frijoles", precio: 30 },
+  { id: "3", producto: "aceite", precio: 60 },
+  { id: "4", producto: "azúcar", precio: 25 },
+  { id: "5", producto: "café", precio: 80 }
+];
+
+let precioMaximo = 40;
+let enPromocion = productos.filter(item => item.precio < precioMaximo);
+enPromocion.forEach(item => {console.log(item.producto +" esta en promocion por valor de $" +item.precio)})
+
+console.log("Productos en promoción (menos de $" + precioMaximo + "):");
+console.log(enPromocion);
+ */
+
+// METODO FIND() RETORNA EL PRIMERT VALOR DE LA LISTA QUE ESTAMOS PROCURANDO
+
+/* let productos = [
+  { id: "1", producto: "arroz", precio: 45 },
+  { id: "2", producto: "frijoles", precio: 30 },
+  { id: "3", producto: "aceite", precio: 60 },
+  { id: "4", producto: "azúcar", precio: 25 },
+  { id: "5", producto: "café", precio: 85 },
+  { id: "6", producto: "leche", precio: 18 },
+  { id: "7", producto: "pan", precio: 12 },
+  { id: "8", producto: "mantequilla", precio: 35 },
+  { id: "9", producto: "pasta", precio: 22 },
+  { id: "10", producto: "sal", precio: 8 },
+  { id: "11", producto: "huevos", precio: 50 },
+  { id: "12", producto: "harina", precio: 28 }
+];
+let buscaProducto = productos.find(item=>item.id==="2")
+console.log(buscaProducto) */
+
+/* let productos = [
+  { id: "1", producto: "arroz", precio: 45 },
+  { id: "2", producto: "frijoles", precio: 30 },
+  { id: "3", producto: "aceite", precio: 60 },
+  { id: "4", producto: "azúcar", precio: 25 },
+  { id: "5", producto: "café", precio: 85 },
+  { id: "6", producto: "leche", precio: 18 },
+  { id: "7", producto: "pan", precio: 12 },
+  { id: "8", producto: "mantequilla", precio: 35 },
+  { id: "9", producto: "pasta", precio: 22 },
+  { id: "10", producto: "sal", precio: 8 },
+  { id: "11", producto: "huevos", precio: 50 },
+  { id: "12", producto: "harina", precio: 28 }
+];
+let listaProductos=productos
+console.log(listaProductos)
+
+let index = productos.findIndex(item => item.id==="2")
+productos[index].producto = "porotos"
+console.log(productos) */
+
+/* let cursosTecnologia = [
+  { id: 1, curso:"Phyton Web", vagas:12, segmento: "Tecnologia da informação"},
+  { id: 2, curso: "Design Gráfico", vagas: 0, segmento: "Design" },
+  { id: 3, curso: "Marketing Digital", vagas: 25, segmento: "Marketing" },
+  { id: 4, curso: "Assistente Administrativo", vagas: 20, segmento: "Administração" },
+  { id: 5, curso: "Banco de Dados", vagas: 0, segmento: "Tecnologia da Informação" },
+  { id: 6, curso: "Desenvolvimento Mobile", vagas: 10, segmento: "Tecnologia da Informação" }
+]
+const salida= cursosTecnologia.filter(item=>item.vagas>0)
+console.log("============ CURSOS COM VAGAS DISPONIVEIS===============")
+salida.forEach(item=>console.log(`- ${item.curso} | ${item.vagas} vagas | ${item.segmento}`))
+
+const semVagas= cursosTecnologia.filter(item=>item.vagas===0)
+console.log("============ CURSOS SEM VAGAS DISPONIVEIS===============")
+semVagas.forEach(item=>console.log(`- ${item.curso} | ${item.vagas} vagas | ${item.segmento}`))
+console.log("Por favor não se mata, abriram vagas logo depois, vai catar manga!!") */
+
+
